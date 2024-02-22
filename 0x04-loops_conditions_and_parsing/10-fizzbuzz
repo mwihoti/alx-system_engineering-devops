@@ -8,7 +8,7 @@ if((i % 3 == 0)) && ((i % 5 == 0))
 	elif ((i % 3 == 0))
 	then
 	echo "Fizz"
-	elif ((1 % 5 == 0))
+	elif ((i % 5 == 0))
 	then
 	echo "Buzz"
 else
