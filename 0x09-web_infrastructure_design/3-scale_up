@@ -1,1 +1,14 @@
 https://imgur.com/19hnxRv
+
+Separation of Components onto Different Servers:
+
+By splitting components onto separate servers, we enhance scalability, fault tolerance, and ease of maintenance.
+Isolating the application server and database onto dedicated servers allows for better resource management and optimization.
+Load-Balancer (HAproxy) Cluster:
+
+HAproxy is configured as a cluster with multiple instances to ensure high availability and redundancy.
+Clustering HAproxy instances provides fault tolerance, where if one instance fails, others can seamlessly handle incoming traffic.
+
+
+Separating the web server, application server, and database onto dedicated servers improves scalability and resource utilization.
+It allows each component to scale independently based on its specific resource requirements.
