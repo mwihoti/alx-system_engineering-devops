@@ -1,1 +1,10 @@
 https://imgur.com/mAPsEAk
+
+The load balancer setup is Active-Active, meaning that all servers actively handle incoming requests simultaneously. In contrast, Active-Passive setup involves standby servers that become active only when the primary servers fail.
+
+The Primary node serves as the read-write instance, handling write operations and synchronizing data changes to the Replica nodes.
+Replica nodes act as read-only instances, replicating data from the Primary node to provide fault tolerance and read scalability.
+
+Difference Between Primary and Replica Nodes:
+
+The Primary node handles write operations and serves as the authoritative source for data changes, while Replica nodes replicate data from the Primary node and serve read requests to offload read operations from the Primary node.

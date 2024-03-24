@@ -1,3 +1,15 @@
 https://imgur.com/951WcFp
 
+server - piece of computer hardware or software that provides functionality for other programs or devices.
 
+Domain name - a string of text that maps to an alphanumeric IP address, used to access a website from client software.
+
+www.foobar.com is type of CNAME record DNS
+
+The role of a web server - software and hardware that uses HTTP (Hypertext Transfer Protocol) and other protocols to respond to client requests made over the World Wide Web.
+
+What is the role of the application server- The role of Application server It is system software that resides between the operating system (OS) on one side, the external resources (such as a database management system [DBMS], communications and Internet services) on another side and the users' applications on the third side.
+
+What is the role of the database - an organized collection of structured information, or data, typically stored electronically in a computer system. 
+
+What is the server using to communicate with the computer of the user requesting the website-- the server commuinicats usings HTTP or HTTPs

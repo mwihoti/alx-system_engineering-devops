@@ -1,1 +1,17 @@
 https://imgur.com/n1p253B
+
+Load balance- Added to distribute traffic evenly and ensure high availability and scalability.
+
+Database Server: Added to manage website data and ensure data integrity and persistence.
+
+This setup is Active-Passive. In an Active-Passive setup, one server (the active server) handles all incoming traffic, while the other server (the passive server) remains on standby. In the event of a failure, the passive server takes over to maintain service availability.
+
+Load Balancer Configuration:
+
+HAProxy is configured with a round-robin distribution algorithm, which routes each new request to the next server in line, distributing the load evenly.
+
+Database Primary-Replica Cluster:
+
+In a Primary-Replica cluster, the Primary node (Master) handles all write operations (inserts, updates, deletes), while the Replica nodes (Slaves) replicate data from the Primary and handle read operations.
+
+The Primary node is responsible for handling write operations and maintaining data consistency, while the Replica nodes replicate data from the Primary and serve read-only queries. If the Primary node fails, one of the Replica nodes can be promoted to the Primary role to maintain continuity of service.
