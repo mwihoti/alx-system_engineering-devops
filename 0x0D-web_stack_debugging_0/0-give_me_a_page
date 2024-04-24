@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # a script to restart apache
 sudo service apache2 start
+echo "Apache is running"
