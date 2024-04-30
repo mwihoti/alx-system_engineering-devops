@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Bash script to fix server to run on port 80
+# Backup the default Nginx configuration
+
+mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+
+# Create a new Nginx configuration file
+cat <<EOF > /etc/nginx/sites-available/default
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    server_name _;
+
+    root /var/www/html;
+    index index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+EOF
+
+# Restart Nginx to apply changes
+sudo service nginx start
