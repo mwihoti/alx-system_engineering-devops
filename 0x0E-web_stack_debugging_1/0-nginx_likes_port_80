@@ -3,7 +3,7 @@
 # Backup the default Nginx configuration
 
 mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-
+service nginx stop
 # Create a new Nginx configuration file
 cat <<EOF > /etc/nginx/sites-available/default
 server {
@@ -20,6 +20,5 @@ server {
     }
 }
 EOF
-
-# Restart Nginx to apply changes
+pkill nginx
 sudo service nginx start
