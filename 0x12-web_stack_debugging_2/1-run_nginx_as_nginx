@@ -2,6 +2,8 @@
 #script that configures:-
 #nginx to run as nginx user
 #Nginx must be listening on all active IPS on port 8080
-chmod nginx:nginx /etc/nginx/nginx.conf
+sudo apt-get update
+sudo apt-get install nginx -y
+chown nginx:nginx /etc/nginx/nginx.conf
 sed -i 's/80 default_server/8080 default_server/' /etc/nginx/sites-available/default
 sudo -u nginx service nginx start
