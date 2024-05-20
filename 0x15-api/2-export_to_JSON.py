@@ -17,7 +17,7 @@ if __name__ == "__main__":
     data = response.text
 
     data = json.loads(data)
-    name = data[0].get('username')
+    username = data[0].get('username')
 
     """#get info about tasks"""
     task_url = '{}/todos?userId={}'.format(my_api, user_id)

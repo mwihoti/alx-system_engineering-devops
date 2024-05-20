@@ -4,7 +4,7 @@
 import json
 import requests
 import sys
-import csv
+
 
 my_api = 'https://jsonplaceholder.typicode.com'
 
