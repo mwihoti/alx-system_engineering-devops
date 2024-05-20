@@ -30,3 +30,17 @@ if __name__ == "__main__":
 
     completed = 0
     total_tasks = len(tasks)
+
+    dict_key = str(user_id)
+
+    mycsv = {dict_key: []}
+    for task in tasks:
+        json_data = {
+            "task": task['title'],
+            "completed": task['completed'],
+            "username": username
+        }
+        mycsv[dict_key].append(json_data)
+    json_encode = json.dumps(mycsv)
+    with open('{}.json'.format(user_id), 'w', encoding='UTF8') as jsonFile:
+        jsonFile.write(json_encode)
