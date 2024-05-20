@@ -4,7 +4,6 @@
 import json
 import requests
 import sys
-import csv
 
 my_api = 'https://jsonplaceholder.typicode.com'
 
@@ -18,7 +17,7 @@ if __name__ == "__main__":
     data = response.text
 
     data = json.loads(data)
-    username = data[0].get('username')
+    name = data[0].get('username')
 
     """#get info about tasks"""
     task_url = '{}/todos?userId={}'.format(my_api, user_id)
@@ -31,15 +30,3 @@ if __name__ == "__main__":
 
     completed = 0
     total_tasks = len(tasks)
-
-    # csv
-    mycsv = ""
-    for task in tasks:
-        mycsv += '"{}","{}","{}","{}"\n'.format(
-            user_id,
-            username,
-            task['completed'],
-            task['title']
-        )
-    with open('{}.csv'.format(user_id), 'w', encoding='UTF8') as csvFile:
-        csvFile.write(mycsv)
