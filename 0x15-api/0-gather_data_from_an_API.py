@@ -21,14 +21,14 @@ if __name__ == "__main__":
     """#get info about tasks"""
     task_url = '{}/todos?userId={}'.format(my_api, user_id)
 
-    response = requests.get(task_url, user_id)
+    response = requests.get(task_url)
 
     tasks = response.text
+    tasks = json.loads(tasks)
 
     completed = 0
     total_tasks = len(tasks)
     """#parse data to json"""
-    tasks = json.loads(tasks)
 
     """#get Task completed"""
     completed_tasks = []
