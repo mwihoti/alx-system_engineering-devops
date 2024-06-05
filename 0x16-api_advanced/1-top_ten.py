@@ -9,10 +9,6 @@ import requests
 
 
 def top_ten(subreddit):
-    """
-    Defines top_ten function that prints first top 20 hot posts for a given
-    subreddit
-    """
     url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {'User-Agent': 'Mozilla/5.0'}
     response = requests.get(url, headers=headers, allow_redirects=False)
