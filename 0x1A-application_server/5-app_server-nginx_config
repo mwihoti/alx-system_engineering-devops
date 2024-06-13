@@ -40,4 +40,3 @@ server {
                 index index.html index.htm;
         }
 }
-
